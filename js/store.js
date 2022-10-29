@@ -185,11 +185,11 @@ function updateProductCount(productId, newCount) {
     
     console.log("product id: " + productId + ' new count: ' + newCount);
     let basket = [...userBasket];
-    console.log(count)
+    console.log(newCount)
     basket.forEach(function (product) {
-        if (product.id === productId &&  parseInt(count)>0) {
-            product.count = parseInt(count);
-        } else if (parseInt(count) <= 0) {
+        if (product.id === productId &&  parseInt(newCount)>0) {
+            product.count = parseInt(newCount);
+        } else if (parseInt(newCount) <= 0) {
        
             removeProductFromBasket(productId);
         
